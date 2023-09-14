@@ -5,6 +5,7 @@ using UnityEngine;
 public class Laser : MonoBehaviour
 {
     [SerializeField] float laserSpeed = 1f;
+    private float destroyLaserYCoord = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,5 +16,9 @@ public class Laser : MonoBehaviour
     void Update()
     {
         transform.position += new Vector3(0, laserSpeed, 0) * Time.deltaTime; 
+        if(transform.position.y >= destroyLaserYCoord)
+        {
+            Destroy(gameObject);
+        }
     }
 }

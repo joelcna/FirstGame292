@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     int score = 0;
-    bool isGameOver = false;
+    public bool isGameOver = false;
     public static GameManager instance;
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] GameObject gameOverText;

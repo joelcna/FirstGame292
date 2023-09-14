@@ -99,6 +99,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 4060535017230834678, guid: d618e9cd8e1e80c4f9f15cb5a7306746, type: 3}
+  moveSpeed: 8
+  dashSpeed: 14
+  dashDuration: 0.1
+  dashCooldown: 1
 --- !u!58 &-5370488348094575247
 CircleCollider2D:
   m_ObjectHideFlags: 0

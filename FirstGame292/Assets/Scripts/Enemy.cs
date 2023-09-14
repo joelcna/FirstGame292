@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] float speed = 10f;
     [SerializeField] GameManager manager;
+/*    private float destroyEnemyYCoord = -10;*/
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +30,11 @@ public class Enemy : MonoBehaviour
             GameManager.instance.increaseScore(1);
         }
         Destroy(gameObject);
-        Destroy(collision.gameObject);    
-
+        Destroy(collision.gameObject);
+        
+        /*if (transform.position.y <= destroyEnemyYCoord)
+        {
+            Destroy(gameObject);
+        }*/
     }
 }
